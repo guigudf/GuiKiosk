@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18b12e23-90b3-4bc1-8a1a-7f434abf986d" name="Changes" comment="adding vcs" />
+    <list default="true" id="18b12e23-90b3-4bc1-8a1a-7f434abf986d" name="Changes" comment="">
+      <changelist_data name="GuilhermeDSA" email="" automatic="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +21,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="GuilhermeDSA" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -52,22 +60,30 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Application.gdsa.com.kiosk.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.CartAddTest.executor": "Run",
     "JUnit.CartTest.executor": "Run",
+    "JUnit.FlowTest.executor": "Run",
     "JUnit.ReceiptServiceTest.executor": "Run",
+    "JUnit.java.gdsa.com.kiosk in GuiKiosk.executor": "Run",
     "Maven.Final_Project [install,--non-recursive].executor": "Run",
     "Maven.Final_Project [install].executor": "Run",
+    "Maven.Gdsa [install].executor": "Run",
     "Maven.Main.executor": "Run",
     "Maven.com.gdsa.kiosk.cli.Main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "last_directory_selection": "C:/Users/guigu/Documents/OOP2/GuiKiosk/Gdsa/src/main/java/gdsa/com/kiosk",
     "last_opened_file_path": "C:/Users/guigu/Documents/OOP2/GuiKiosk",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.VCS"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -93,8 +109,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Final_Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gdsa.kiosk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gdsa.kiosk" />
+      <option name="MAIN_CLASS_NAME" value="com.gdsa.kiosk.CartTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java.gdsa.com.kiosk in GuiKiosk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GuiKiosk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="java.gdsa.com.kiosk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="java.gdsa.com.kiosk" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CartTest" />
+        <item itemvalue="JUnit.java.gdsa.com.kiosk in GuiKiosk" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
