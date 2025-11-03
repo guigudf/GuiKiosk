@@ -15,19 +15,60 @@
  ![GitHub contributors](https://img.shields.io/github/contributors/guigudf/GuiKiosk?color=ff69b4)
  
 ## 💻 Project Objectives
-
+- Model a small ordering domain with **MenuItems, Cart, and Tax calculation**.
+- Understand **Java packages, classes, interfaces**, and **separation of concerns**.
+- Write **unit tests** for models and basic flows.
+- Create a **console program** that reads commands and prints a receipt.
+- Create a **GUI** for the program.
 
 ## 📚 Releases
+- Week 0: Project skeleton, Maven setup, package layout, JUnit added.
+- Week 1: Domain models (`MenuItem`, `CartItem`, `Cart`) and unit tests.
+- Week 2: Interfaces (`TaxCalculator`, `CatalogRepository`) and services (`ReceiptService`) with unit tests.
+- Week 3: Console CLI to interact with the cart and generate receipts.
 
 
 ## ✏ Hot to execute the Project
 
+### Running the CLI
 
-### 🧰️ Tools and Tecnologies
+To Execute the CLI version of the kiosk:
+
+```bash
+java -cp target/classes com.gdsa.kiosk.cli.MainCLI
+```
+
+### Running the GUI
+
+To Execute the GUI version of the kiosk:
+
+```bash
+java -cp target/classes com.gdsa.kiosk.GUI.MainGUI
+```
 
 
-### 💿 Installation 
+## 🧰️ Tools and Tecnologies
+- Java 25
 
+- Maven
+
+- JUnit 5 (Jupiter)
+
+- IntelliJ IDEA
+
+
+## 💿 Installation 
+1. Clone the repository:
+```
+git clone (https://github.com/guigudf/GuiKiosk.git)
+```
+
+2. Open in IntelliJ IDEA or your preferred IDE.
+
+3. Build with Maven (mvn package):
+```
+mvn -q -DskipTests package
+```
 
 ## 🤝 Free Contribution
 
