@@ -1,0 +1,12 @@
+com\gdsa\kiosk\interfaces\CatalogRepository.class
+com\gdsa\kiosk\interfaces\TaxCalculator.class
+com\gdsa\kiosk\model\ReceiptService.class
+com\gdsa\kiosk\model\MenuItem.class
+com\gdsa\kiosk\UI\KioskUI$MenuTableModel.class
+com\gdsa\kiosk\cli\Main.class
+com\gdsa\kiosk\model\FlatRateTaxCalculator.class
+com\gdsa\kiosk\repo\InMemoryCatalogRepository.class
+com\gdsa\kiosk\Main.class
+com\gdsa\kiosk\model\Cart.class
+com\gdsa\kiosk\model\CartItem.class
+com\gdsa\kiosk\UI\KioskUI.class
