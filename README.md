@@ -1,19 +1,18 @@
 # **Oop2_Order_Kiosk_demo**
 
 <p align="center">
-  <img width="300" src="docs/assets/img/logo.png">
+  <img width="300" src="Resources/kiosk_Icon.png">
 </p>
-<h1 align="center">Order Kiosk</h1>
+<h1 align="center">Gui Kiosk</h1>
 
 
-https://img.shields.io/github/issues/guigudf/Oop2_Order_Kiosk_demo
- ![GitHub issues](https://img.shields.io/github/issues/guigudf/Oop2_Order_Kiosk_demo?color=red)
- ![GitHub closed issues](https://img.shields.io/github/issues-closed/guigudf/Oop2_Order_Kiosk_demo?color=green)
- ![GitHub pull requests](https://img.shields.io/github/issues-pr/guigudf/Oop2_Order_Kiosk_demo?color=orange)
- ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/guigudf/Oop2_Order_Kiosk_demo?color=brightgreen)
- ![GitHub branches](https://badgen.net/github/branches/guigudf/Oop2_Order_Kiosk_demo/)
- ![GitHub repo size](https://img.shields.io/github/repo-size/guigudf/Oop2_Order_Kiosk_demo?color=purple)
- ![GitHub contributors](https://img.shields.io/github/contributors/guigudf/Oop2_Order_Kiosk_demo?color=ff69b4)
+ ![GitHub issues](https://img.shields.io/github/issues/guigudf/GuiKiosk?color=red)
+ ![GitHub closed issues](https://img.shields.io/github/issues-closed/guigudf/GuiKiosk?color=green)
+ ![GitHub pull requests](https://img.shields.io/github/issues-pr/guigudf/GuiKiosk?color=orange)
+ ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/guigudf/GuiKiosk?color=brightgreen)
+ ![GitHub branches](https://badgen.net/github/branches/guigudf/GuiKiosk/)
+ ![GitHub repo size](https://img.shields.io/github/repo-size/guigudf/GuiKiosk?color=purple)
+ ![GitHub contributors](https://img.shields.io/github/contributors/guigudf/GuiKiosk?color=ff69b4)
  
 ## 💻 Project Objectives
 
