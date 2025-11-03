@@ -1,5 +1,5 @@
-package gdsa.com.kiosk.model;
-import gdsa.com.kiosk.interfaces.TaxCalculator;
+package com.gdsa.kiosk.model;
+import com.gdsa.kiosk.interfaces.TaxCalculator;
 
 import java.math.BigDecimal;
 

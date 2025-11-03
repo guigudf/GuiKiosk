@@ -1,10 +1,9 @@
-package kiosk;
+package com.gdsa.kiosk;
 
 import com.gdsa.kiosk.model.Cart;
 import com.gdsa.kiosk.model.MenuItem;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 
 import java.math.BigDecimal;
@@ -25,7 +24,7 @@ public class CartTest {
 
         BigDecimal subtotal = cart.subtotal();
 
-        assertEquals(
+        Assertions.assertEquals(
                 coffee.getPrice().multiply(new BigDecimal(qty)),
                 subtotal
         );

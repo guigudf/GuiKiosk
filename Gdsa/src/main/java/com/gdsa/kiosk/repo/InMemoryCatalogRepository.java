@@ -1,7 +1,7 @@
-package gdsa.com.kiosk.repo;
+package com.gdsa.kiosk.repo;
 
-import gdsa.com.kiosk.interfaces.CatalogRepository;
-import gdsa.com.kiosk.model.MenuItem;
+import com.gdsa.kiosk.interfaces.CatalogRepository;
+import com.gdsa.kiosk.model.MenuItem;
 import java.math.BigDecimal;
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package gdsa.com.kiosk.interfaces;
+package com.gdsa.kiosk.interfaces;
 
-import gdsa.com.kiosk.model.MenuItem;
+import com.gdsa.kiosk.model.MenuItem;
 import java.util.List;
 
 public interface CatalogRepository {

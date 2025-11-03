@@ -1,9 +1,9 @@
-package gdsa.com.kiosk.UI;
+package com.gdsa.kiosk.UI;
 
-import gdsa.com.kiosk.interfaces.CatalogRepository;
-import gdsa.com.kiosk.model.*;
-import gdsa.com.kiosk.model.MenuItem;
-import gdsa.com.kiosk.repo.InMemoryCatalogRepository;
+import com.gdsa.kiosk.interfaces.CatalogRepository;
+import com.gdsa.kiosk.model.*;
+import com.gdsa.kiosk.model.MenuItem;
+import com.gdsa.kiosk.repo.InMemoryCatalogRepository;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -12,10 +12,7 @@ import java.awt.*;
 import java.math.BigDecimal;
 import java.util.List;
 
-/**
- * Simple Swing-based kiosk UI that integrates with your project’s model classes.
- * Shows menu buttons, a shopping cart table, and receipt generation.
- */
+
 public class KioskUI extends JFrame {
 
     private final CatalogRepository catalog = new InMemoryCatalogRepository();

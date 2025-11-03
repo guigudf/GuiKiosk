@@ -1,4 +1,4 @@
-package gdsa.com.kiosk.model;
+package com.gdsa.kiosk.model;
 import java.math.BigDecimal;
 
 public class CartItem {

@@ -1,4 +1,4 @@
-package gdsa.com.kiosk.interfaces;
+package com.gdsa.kiosk.interfaces;
 
 import java.math.BigDecimal;
 

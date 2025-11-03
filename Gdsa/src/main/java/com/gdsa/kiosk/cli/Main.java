@@ -1,8 +1,11 @@
-package gdsa.com.kiosk.cli;
+package com.gdsa.kiosk.cli;
 
-import gdsa.com.kiosk.interfaces.CatalogRepository;
-import gdsa.com.kiosk.model.*;
-import gdsa.com.kiosk.repo.InMemoryCatalogRepository;
+import com.gdsa.kiosk.interfaces.CatalogRepository;
+import com.gdsa.kiosk.model.Cart;
+import com.gdsa.kiosk.model.FlatRateTaxCalculator;
+import com.gdsa.kiosk.model.MenuItem;
+import com.gdsa.kiosk.model.ReceiptService;
+import com.gdsa.kiosk.repo.InMemoryCatalogRepository;
 import java.math.BigDecimal;
 import java.util.Scanner;
 

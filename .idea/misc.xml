@@ -9,6 +9,9 @@
       </list>
     </option>
   </component>
+  <component name="ProjectResources">
+    <resource url="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" location="$PROJECT_DIR$/surefire-test-report.xsd" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="openjdk-25" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/../Final_Project/out" />
   </component>

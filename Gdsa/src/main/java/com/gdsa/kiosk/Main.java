@@ -1,10 +1,6 @@
-package gdsa.com.kiosk;
+package com.gdsa.kiosk;
 
-import gdsa.com.kiosk.UI.KioskUI;
-import gdsa.com.kiosk.model.MenuItem;
-
-import java.awt.*;
-import java.math.BigDecimal;
+import com.gdsa.kiosk.UI.KioskUI;
 
 public class Main {
 //    public static void main(String[] args) {
