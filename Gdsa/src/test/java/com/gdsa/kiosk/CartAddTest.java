@@ -15,8 +15,8 @@ public class CartAddTest {
     @BeforeEach
     void setup() {
         cart = new Cart();
-        coffee = new MenuItem("Coffee", new BigDecimal("3.50"));
-        muffin = new MenuItem("Muffin", new BigDecimal("2.25"));
+        coffee = new MenuItem("Coffee", new BigDecimal("3.50"), Category.COFFEE);
+        muffin = new MenuItem("Muffin", new BigDecimal("2.25"), Category.BAKERY);
     }
 
     @Test

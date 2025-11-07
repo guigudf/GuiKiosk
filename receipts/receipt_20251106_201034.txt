@@ -1,0 +1,6 @@
+Item                 Qty   Price   Total
+Americano              2    3,50    7,00
+----------------------------------------
+Subtotal:                         7,00
+Tax:                              0,42
+Total:                            7,42

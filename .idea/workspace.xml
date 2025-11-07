@@ -4,15 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18b12e23-90b3-4bc1-8a1a-7f434abf986d" name="Changes" comment="correction">
-      <change afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/GUI/MainGUI.java" afterDir="false" />
+    <list default="true" id="18b12e23-90b3-4bc1-8a1a-7f434abf986d" name="Changes" comment="Week 4: add Category to MenuItem and repository filtering">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/CLI/MainCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/interfaces/CatalogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/interfaces/CatalogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/MenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/MenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/repo/InMemoryCatalogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/repo/InMemoryCatalogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/CLI/MainCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/CLI/MainCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/UI/KioskUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/UI/KioskUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/CartAddTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/CartAddTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/CartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/PurchaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/PurchaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/ReceiptServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/ReceiptServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/Gdsa-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/Gdsa-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/cli/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/UI/KioskUI$MenuTableModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/UI/KioskUI$MenuTableModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/UI/KioskUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/UI/KioskUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/interfaces/CatalogRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/interfaces/CatalogRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/model/MenuItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/model/MenuItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/repo/InMemoryCatalogRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/repo/InMemoryCatalogRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
@@ -24,7 +30,7 @@
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CartTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CartTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.ReceiptServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.ReceiptServiceTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/test-classes/com/gdsa/kiosk/CartAddTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/test-classes/com/gdsa/kiosk/CartAddTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/target/test-classes/com/gdsa/kiosk/FlowTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/test-classes/com/gdsa/kiosk/CartTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/test-classes/com/gdsa/kiosk/CartTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/test-classes/com/gdsa/kiosk/ReceiptServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/test-classes/com/gdsa/kiosk/ReceiptServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -119,7 +125,7 @@
       <recent name="C:\Users\guigu\Documents\OOP2\Final_Project\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.gdsa.kiosk.Main" />
       <module name="Final_Project" />
@@ -210,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762205837626</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Week 4: add Category to MenuItem and repository filtering">
+      <option name="closed" value="true" />
+      <created>1762487214627</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762487214627</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -218,6 +232,7 @@
     <MESSAGE value="adding vcs" />
     <MESSAGE value="Fixed folder naming, adding tests" />
     <MESSAGE value="correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction" />
+    <MESSAGE value="Week 4: add Category to MenuItem and repository filtering" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week 4: add Category to MenuItem and repository filtering" />
   </component>
 </project>

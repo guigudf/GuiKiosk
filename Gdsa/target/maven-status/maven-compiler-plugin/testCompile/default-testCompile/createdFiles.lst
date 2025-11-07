@@ -1,4 +1,7 @@
 com\gdsa\kiosk\PurchaseTest.class
+com\gdsa\kiosk\ReceiptFileTests.class
 com\gdsa\kiosk\CartAddTest.class
+com\gdsa\kiosk\CategoryTests.class
+com\gdsa\kiosk\SqliteReceiptRepositoryTest.class
 com\gdsa\kiosk\CartTest.class
 com\gdsa\kiosk\ReceiptServiceTest.class

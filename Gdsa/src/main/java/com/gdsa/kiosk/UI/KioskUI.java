@@ -4,7 +4,9 @@ import com.gdsa.kiosk.interfaces.CatalogRepository;
 import com.gdsa.kiosk.model.*;
 import com.gdsa.kiosk.model.MenuItem;
 import com.gdsa.kiosk.repo.InMemoryCatalogRepository;
-
+import com.gdsa.kiosk.repo.SqliteReceiptRepository;
+import com.gdsa.kiosk.model.ReceiptDbSaver;
+import java.nio.file.Paths;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.AbstractTableModel;
@@ -19,7 +21,8 @@ public class KioskUI extends JFrame {
     private final Cart cart = new Cart();
     private final ReceiptService receiptService =
             new ReceiptService(new FlatRateTaxCalculator(new BigDecimal("0.06")));
-
+    private final SqliteReceiptRepository dbRepo = new SqliteReceiptRepository(Paths.get("receipts.db"));
+    private final ReceiptDbSaver dbSaver = new ReceiptDbSaver(receiptService, dbRepo);
     private final MenuTableModel cartModel = new MenuTableModel();
     private final JLabel subtotalLabel = new JLabel("Subtotal: $0.00");
     private final JLabel taxLabel = new JLabel("Tax: $0.00");
@@ -81,14 +84,41 @@ public class KioskUI extends JFrame {
         });
 
         checkoutBtn.addActionListener(e -> {
-            List<String> receipt = receiptService.render(cart);
-            JTextArea ta = new JTextArea(String.join("\n", receipt));
-            ta.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
-            ta.setEditable(false);
-            JOptionPane.showMessageDialog(this, new JScrollPane(ta),
-                    "Receipt", JOptionPane.INFORMATION_MESSAGE);
-        });
+            try {
+                if (cart.items().isEmpty()) {
+                    JOptionPane.showMessageDialog(this, "Cart is empty!", "Error", JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
 
+                // 1️⃣ Render and display receipt
+                List<String> receipt = receiptService.render(cart);
+                JTextArea ta = new JTextArea(String.join("\n", receipt));
+                ta.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
+                ta.setEditable(false);
+                JOptionPane.showMessageDialog(this, new JScrollPane(ta),
+                        "Receipt", JOptionPane.INFORMATION_MESSAGE);
+
+                // 2️⃣ Ask for customer name (optional)
+                String name = JOptionPane.showInputDialog(this, "Enter customer name:", "Guest");
+                if (name == null || name.isBlank()) name = "Guest";
+
+                // 3️⃣ Save to SQLite DB
+                long id = dbSaver.renderAndSave(cart, name);
+
+                // 4️⃣ Confirm
+                JOptionPane.showMessageDialog(this, "Saved receipt with ID: " + id, "Database Saved",
+                        JOptionPane.INFORMATION_MESSAGE);
+
+                // 5️⃣ Clear cart after checkout
+                cart.clear();
+                cartModel.refresh();
+                updateTotals();
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Error saving receipt: " + ex.getMessage(),
+                        "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        });
         cartControls.add(removeBtn);
         cartControls.add(clearBtn);
         cartControls.add(checkoutBtn);

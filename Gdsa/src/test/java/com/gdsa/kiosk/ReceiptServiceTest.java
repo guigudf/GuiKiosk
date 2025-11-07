@@ -1,9 +1,6 @@
 package com.gdsa.kiosk;
 
-import com.gdsa.kiosk.model.Cart;
-import com.gdsa.kiosk.model.FlatRateTaxCalculator;
-import com.gdsa.kiosk.model.MenuItem;
-import com.gdsa.kiosk.model.ReceiptService;
+import com.gdsa.kiosk.model.*;
 import com.gdsa.kiosk.repo.InMemoryCatalogRepository;
 import org.junit.jupiter.api.*;
 import java.math.BigDecimal;
@@ -34,8 +31,8 @@ class ReceiptServiceTest {
 
     @Test
     void ReceiptTotalsTest() {
-        cart.add(new MenuItem("Coffee", new BigDecimal("3.00")), 2);
-        cart.add(new MenuItem("Muffin", new BigDecimal("2.00")), 1);
+        cart.add(new MenuItem("Coffee", new BigDecimal("3.00"), Category.COFFEE), 2);
+        cart.add(new MenuItem("Muffin", new BigDecimal("2.00"), Category.BAKERY), 1);
 
         List<String> lines = receipt.render(cart);
 
