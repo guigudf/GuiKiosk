@@ -5,9 +5,9 @@ import java.util.Objects;
 public class MenuItem {
     private final String name;
     private final BigDecimal price;
+    private final Category category;
 
-
-    public MenuItem(String name, BigDecimal price) {
+    public MenuItem(String name, BigDecimal price, Category category) {
         if(name == null || name.isBlank()) {
             throw new IllegalArgumentException("Name is not valid");
         }
@@ -16,17 +16,27 @@ public class MenuItem {
             throw new IllegalArgumentException("Price is not valid");
         }
 
+        if (category == null) throw new IllegalArgumentException("category required");
+
         this.name = name;
         this.price = price;
+        this.category = category;
+
     }
 
     public String getName() {
+
         return this.name;
     }
 
     public BigDecimal getPrice() {
+
         return  this.price;
     }
+
+    public Category getCategory() {
+        return category; }
+
 
     @Override
     public String toString() {
@@ -41,16 +51,10 @@ public class MenuItem {
             return false;
         }
 
-        if(this.name.equals(m.name) && this.price.equals(m.price)) {
-            return true;
-        }
-
-        return false;
+        return this.name.equals(m.name) && this.price.equals(m.price);
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(this.name, this.price);
-    }
+    public int hashCode(){ return Objects.hash(name,price,category); }
 
 }

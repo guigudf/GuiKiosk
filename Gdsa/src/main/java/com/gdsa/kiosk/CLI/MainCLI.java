@@ -1,4 +1,4 @@
-package com.gdsa.kiosk.cli;
+package com.gdsa.kiosk.CLI;
 
 import com.gdsa.kiosk.interfaces.CatalogRepository;
 import com.gdsa.kiosk.model.Cart;
@@ -9,7 +9,7 @@ import com.gdsa.kiosk.repo.InMemoryCatalogRepository;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-public class Main {
+public class MainCLI  {
     public static void main(){
         CatalogRepository repo = new InMemoryCatalogRepository();
         Cart cart = new Cart();

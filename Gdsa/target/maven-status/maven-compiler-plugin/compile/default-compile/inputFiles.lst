@@ -2,8 +2,9 @@ C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\model\C
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\model\MenuItem.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\model\FlatRateTaxCalculator.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\model\ReceiptService.java
+C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\CLI\MainCLI.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\Main.java
-C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\cli\Main.java
+C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\GUI\MainGUI.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\model\CartItem.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\repo\InMemoryCatalogRepository.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\interfaces\CatalogRepository.java

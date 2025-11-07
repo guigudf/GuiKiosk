@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.gdsa.kiosk.CartAddTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.215 s -- in com.gdsa.kiosk.CartAddTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.085 s -- in com.gdsa.kiosk.CartAddTest

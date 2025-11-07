@@ -4,19 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18b12e23-90b3-4bc1-8a1a-7f434abf986d" name="Changes" comment="Fixed folder naming, adding tests">
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/gdsa/com/kiosk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/gdsa/com/kiosk/UI/KioskUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/UI/KioskUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/gdsa/com/kiosk/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/cli/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/gdsa/com/kiosk/interfaces/CatalogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/interfaces/CatalogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/gdsa/com/kiosk/interfaces/TaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/interfaces/TaxCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/gdsa/com/kiosk/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/gdsa/com/kiosk/model/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/CartItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/gdsa/com/kiosk/model/FlatRateTaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/FlatRateTaxCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/gdsa/com/kiosk/model/MenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/MenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/gdsa/com/kiosk/model/ReceiptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/ReceiptService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/gdsa/com/kiosk/repo/InMemoryCatalogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/repo/InMemoryCatalogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/kiosk/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/CartTest.java" afterDir="false" />
+    <list default="true" id="18b12e23-90b3-4bc1-8a1a-7f434abf986d" name="Changes" comment="correction">
+      <change afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/GUI/MainGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/CLI/MainCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/interfaces/CatalogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/interfaces/CatalogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/MenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/MenuItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/repo/InMemoryCatalogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/repo/InMemoryCatalogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/Gdsa-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/Gdsa-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/cli/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.CartAddTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.CartAddTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.CartTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.CartTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.ReceiptServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.ReceiptServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CartAddTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CartAddTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CartTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CartTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.ReceiptServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.ReceiptServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/test-classes/com/gdsa/kiosk/CartAddTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/test-classes/com/gdsa/kiosk/CartAddTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/test-classes/com/gdsa/kiosk/FlowTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/test-classes/com/gdsa/kiosk/ReceiptServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/test-classes/com/gdsa/kiosk/ReceiptServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +36,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -45,12 +55,12 @@
     &quot;assignee&quot;: &quot;guigudf&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/guigudf/GuiKiosk.git",
-    "accountId": "658d494b-2d72-4170-87ff-91a5382d3a41"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/guigudf/GuiKiosk.git&quot;,
+    &quot;accountId&quot;: &quot;658d494b-2d72-4170-87ff-91a5382d3a41&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenRunner">
     <option name="delegateBuildToMaven" value="true" />
   </component>
@@ -66,37 +76,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.gdsa.com.kiosk.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.CartAddTest.executor": "Run",
-    "JUnit.CartTest.executor": "Run",
-    "JUnit.FlowTest.executor": "Run",
-    "JUnit.ReceiptServiceTest.executor": "Run",
-    "JUnit.java.gdsa.com.kiosk in GuiKiosk.executor": "Run",
-    "Maven.Final_Project [install,--non-recursive].executor": "Run",
-    "Maven.Final_Project [install].executor": "Run",
-    "Maven.Gdsa [install].executor": "Run",
-    "Maven.Main.executor": "Run",
-    "Maven.com.gdsa.kiosk.cli.Main.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "last_directory_selection": "C:/Users/guigu/Documents/OOP2/GuiKiosk/Gdsa/src/main/java/gdsa/com/kiosk",
-    "last_opened_file_path": "C:/Users/guigu/Documents/OOP2/GuiKiosk",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.externalResources"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.gdsa.com.kiosk.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.CartAddTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CartTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FlowTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReceiptServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java.gdsa.com.kiosk in GuiKiosk.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Final_Project [install,--non-recursive].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Final_Project [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Gdsa [install,--non-recursive].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Gdsa [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MainCLI.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MainGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.com.gdsa.kiosk.cli.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/guigu/Documents/OOP2/GuiKiosk/Gdsa/src/main/java/gdsa/com/kiosk&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/guigu/Documents/OOP2/GuiKiosk&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalResources&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\guigu\Documents\OOP2\Final_Project\src\main" />
@@ -189,13 +202,22 @@
       <option name="project" value="LOCAL" />
       <updated>1762205707299</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="correction">
+      <option name="closed" value="true" />
+      <created>1762205837626</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762205837626</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit, setup project" />
     <MESSAGE value="adding vcs" />
     <MESSAGE value="Fixed folder naming, adding tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed folder naming, adding tests" />
+    <MESSAGE value="correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction" />
   </component>
 </project>

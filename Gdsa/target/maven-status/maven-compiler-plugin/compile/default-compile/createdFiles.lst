@@ -1,8 +1,9 @@
+com\gdsa\kiosk\GUI\MainGUI.class
 com\gdsa\kiosk\interfaces\CatalogRepository.class
 com\gdsa\kiosk\interfaces\TaxCalculator.class
 com\gdsa\kiosk\model\MenuItem.class
-com\gdsa\kiosk\cli\Main.class
 com\gdsa\kiosk\Main.class
+com\gdsa\kiosk\cli\MainCLI.class
 com\gdsa\kiosk\UI\KioskUI.class
 com\gdsa\kiosk\model\ReceiptService.class
 com\gdsa\kiosk\UI\KioskUI$MenuTableModel.class
