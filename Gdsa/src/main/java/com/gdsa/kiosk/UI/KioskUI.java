@@ -186,7 +186,7 @@ public class KioskUI extends JFrame {
     }
 
     private void updateTotals() {
-        BigDecimal sub = cart.subtotal();
+        BigDecimal sub = cart.getSubtotal();
         BigDecimal tax = new FlatRateTaxCalculator(new BigDecimal("0.06")).tax(sub);
         BigDecimal total = sub.add(tax);
         subtotalLabel.setText(String.format("Subtotal: $%.2f", sub));
@@ -194,7 +194,7 @@ public class KioskUI extends JFrame {
         totalLabel.setText(String.format("Total: $%.2f", total));
     }
 
-    public static void main() {
+    public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             KioskUI ui = new KioskUI();
             ui.setVisible(true);

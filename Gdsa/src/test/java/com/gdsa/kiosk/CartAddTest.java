@@ -15,15 +15,15 @@ public class CartAddTest {
     @BeforeEach
     void setup() {
         cart = new Cart();
-        coffee = new MenuItem("Coffee", new BigDecimal("3.50"), Category.COFFEE);
-        muffin = new MenuItem("Muffin", new BigDecimal("2.25"), Category.BAKERY);
+        coffee = new MenuItem("Coffee", new BigDecimal("3.50"), Category.DRINK);
+        muffin = new MenuItem("Muffin", new BigDecimal("2.25"), Category.FOOD);
     }
 
     @Test
     void AddSingleItemTest() {
         cart.add(coffee, 1);
         assertEquals(1, cart.items().size());
-        assertEquals(new BigDecimal("3.50"), cart.subtotal());
+        assertEquals(new BigDecimal("3.50"), cart.getSubtotal());
     }
 
     @Test
@@ -31,7 +31,7 @@ public class CartAddTest {
         cart.add(coffee, 2);
         cart.add(muffin, 1);
         assertEquals(2, cart.items().size());
-        assertEquals(new BigDecimal("9.25"), cart.subtotal());
+        assertEquals(new BigDecimal("9.25"), cart.getSubtotal());
     }
 
     @Test
@@ -44,6 +44,6 @@ public class CartAddTest {
 
     @Test
     void EmptyCartSubtotalTest() {
-        assertEquals(new BigDecimal("0"), cart.subtotal());
+        assertEquals(new BigDecimal("0"), cart.getSubtotal());
     }
 }

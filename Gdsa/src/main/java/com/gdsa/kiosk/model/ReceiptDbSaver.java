@@ -11,7 +11,7 @@ public class ReceiptDbSaver {
 
     public long renderAndSave(Cart cart, String customerName) throws Exception {
         var lines = service.render(cart);
-        BigDecimal sub = cart.subtotal();
+        BigDecimal sub = cart.getSubtotal();
         // If your ReceiptService already computes tax and total for you, you can parse from the lines
         // Here we recompute using the same inputs to keep it simple
         // The service has a TaxCalculator inside, so tax is consistent

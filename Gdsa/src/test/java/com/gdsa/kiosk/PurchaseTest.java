@@ -23,15 +23,15 @@ public class PurchaseTest {
     @Test
     void PurchaseFlowTest() {
         // Simulate user adding items via KioskUI
-        MenuItem coffee = new MenuItem("Coffee", new BigDecimal("3.50"), Category.COFFEE);
-        MenuItem sandwich = new MenuItem("Sandwich", new BigDecimal("6.00"), Category.BAKERY);
+        MenuItem coffee = new MenuItem("Coffee", new BigDecimal("3.50"), Category.DRINK);
+        MenuItem sandwich = new MenuItem("Sandwich", new BigDecimal("6.00"), Category.FOOD);
 
         cart.add(coffee, 2);
         cart.add(sandwich, 1);
 
         // Verify subtotal
         BigDecimal expectedSubtotal = new BigDecimal("13.00");
-        assertEquals(0, expectedSubtotal.compareTo(cart.subtotal()));
+        assertEquals(0, expectedSubtotal.compareTo(cart.getSubtotal()));
 
         // Generate receipt and verify totals
         List<String> lines = receipt.render(cart);
@@ -42,7 +42,7 @@ public class PurchaseTest {
         assertTrue(lines.stream().anyMatch(l -> l.contains("Tax")));
         assertTrue(lines.stream().anyMatch(l -> l.contains("Total")));
 
-        assertEquals(expectedSubtotal.setScale(2, RoundingMode.HALF_UP), cart.subtotal().setScale(2, RoundingMode.HALF_UP));
+        assertEquals(expectedSubtotal.setScale(2, RoundingMode.HALF_UP), cart.getSubtotal().setScale(2, RoundingMode.HALF_UP));
         assertEquals(expectedTotal.setScale(2, RoundingMode.HALF_UP), expectedSubtotal.add(expectedTax).setScale(2, RoundingMode.HALF_UP));
     }
 

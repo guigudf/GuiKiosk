@@ -16,7 +16,7 @@ public class CartTest {
         MenuItem coffee = new MenuItem(
                 "Coffee",
                 new BigDecimal(3),
-                Category.COFFEE
+                Category.DRINK
         );
         int qty = 2;
         Cart cart = new Cart();
@@ -24,7 +24,7 @@ public class CartTest {
 
         cart.add(coffee, qty);
 
-        BigDecimal subtotal = cart.subtotal();
+        BigDecimal subtotal = cart.getSubtotal();
 
         Assertions.assertEquals(
                 coffee.getPrice().multiply(new BigDecimal(qty)),

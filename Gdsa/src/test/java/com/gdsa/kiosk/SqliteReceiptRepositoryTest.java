@@ -16,7 +16,7 @@ class SqliteReceiptRepositoryTest {
     @Test void saves_receipt_and_returns_id() throws Exception {
         // Arrange
         Cart cart = new Cart();
-        cart.add(new MenuItem("Americano", new BigDecimal("3.50"),  Category.COFFEE), 2);
+        cart.add(new MenuItem("Americano", new BigDecimal("3.50"),  Category.DRINK), 2);
         ReceiptService svc = new ReceiptService(new FlatRateTaxCalculator(new BigDecimal("0.06")));
         var repo = new SqliteReceiptRepository(temp.resolve("receipts.db"));
         var saver = new ReceiptDbSaver(svc, repo);

@@ -47,11 +47,10 @@ public class MenuItem {
     public boolean equals(Object o) {
         if(o == this) return true;
 
-        if(!(o instanceof MenuItem m)) {
-            return false;
-        }
-
-        return this.name.equals(m.name) && this.price.equals(m.price);
+        if (!(o instanceof MenuItem m)) return false;
+        return Objects.equals(name, m.name)
+                && Objects.equals(price, m.price)
+                && category == m.category; // enum identity is safe
     }
 
     @Override
