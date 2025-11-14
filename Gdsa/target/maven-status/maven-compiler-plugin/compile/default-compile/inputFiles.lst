@@ -3,6 +3,7 @@ C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\model\F
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\model\Order.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\repo\FileReceiptRepository.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\model\FoodCategory.java
+C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\UI\MainFrame.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\model\CartItem.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\repo\InMemoryCatalogRepository.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\interfaces\CatalogRepository.java
@@ -17,6 +18,7 @@ C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\interfa
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\CLI\MainCLI.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\model\ReceiptDbSaver.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\Main.java
+C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\UI\CartTableModel.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\model\Category.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\GUI\MainGUI.java
 C:\Users\guigu\Documents\OOP2\GuiKiosk\Gdsa\src\main\java\com\gdsa\kiosk\interfaces\TaxCalculator.java

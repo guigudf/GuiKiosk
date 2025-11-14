@@ -4,6 +4,8 @@ com\gdsa\kiosk\repo\SqliteReceiptRepository.class
 com\gdsa\kiosk\repo\FileReceiptRepository.class
 com\gdsa\kiosk\model\ReceiptSaver.class
 com\gdsa\kiosk\interfaces\ReceiptRepository.class
+com\gdsa\kiosk\UI\CartTableModel.class
+com\gdsa\kiosk\UI\MainFrame$1.class
 com\gdsa\kiosk\model\FlatRateTaxCalculator.class
 com\gdsa\kiosk\interfaces\TaxCalculator.class
 com\gdsa\kiosk\model\Order.class
@@ -17,6 +19,7 @@ com\gdsa\kiosk\CLI\MainCLI.class
 com\gdsa\kiosk\interfaces\ReceiptDbRepository.class
 com\gdsa\kiosk\model\ReceiptService.class
 com\gdsa\kiosk\UI\KioskUI$MenuTableModel.class
+com\gdsa\kiosk\UI\MainFrame.class
 com\gdsa\kiosk\model\BeverageCategory.class
 com\gdsa\kiosk\repo\InMemoryCatalogRepository.class
 com\gdsa\kiosk\model\Cart.class

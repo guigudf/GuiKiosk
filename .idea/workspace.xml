@@ -4,45 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18b12e23-90b3-4bc1-8a1a-7f434abf986d" name="Changes" comment="Week 5 and 6: save receipt to a file, extend CLI with categories and save, save receipt to SQLite">
+    <list default="true" id="18b12e23-90b3-4bc1-8a1a-7f434abf986d" name="Changes" comment="Week 7: Prepare models for UI">
+      <change afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/UI/CartTableModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/UI/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/GUI/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/GUI/MainGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/UI/KioskUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/UI/KioskUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/MenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/MenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/ReceiptDbSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/ReceiptDbSaver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/ReceiptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/ReceiptService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/repo/InMemoryCatalogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/repo/InMemoryCatalogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/CartAddTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/CartAddTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/CartTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/CategoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/CategoryTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/PurchaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/PurchaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/ReceiptFileTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/ReceiptFileTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/ReceiptServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/ReceiptServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/SqliteReceiptRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/SqliteReceiptRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/Gdsa-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/Gdsa-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/GUI/MainGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/GUI/MainGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/UI/KioskUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/UI/KioskUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/2025-11-03T13-57-37_432-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/2025-11-03T13-57-37_432-jvmRun1.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.CartAddTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.CartAddTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.CartTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.CartTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.CategoryTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.CategoryTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.FlowTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.OrderTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.OrderTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.PurchaseTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.PurchaseTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.ReceiptFileTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.ReceiptFileTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.ReceiptServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.ReceiptServiceTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.SqliteReceiptRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.SqliteReceiptRepositoryTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CartAddTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CartAddTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CategoryTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CategoryTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.FlowTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.PurchaseTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.PurchaseTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CartTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CartTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.OrderTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.OrderTests.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.ReceiptFileTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.ReceiptFileTests.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.ReceiptServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.ReceiptServiceTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.SqliteReceiptRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.SqliteReceiptRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/receipts.db" beforeDir="false" afterPath="$PROJECT_DIR$/receipts.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +228,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762489766934</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Week 7: Prepare models for UI">
+      <option name="closed" value="true" />
+      <created>1763092973140</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1763092973140</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Week 7: Prepare models for UI">
+      <option name="closed" value="true" />
+      <created>1763093100208</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1763093100208</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -254,6 +254,7 @@
     <MESSAGE value="correction" />
     <MESSAGE value="Week 4: add Category to MenuItem and repository filtering" />
     <MESSAGE value="Week 5 and 6: save receipt to a file, extend CLI with categories and save, save receipt to SQLite" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week 5 and 6: save receipt to a file, extend CLI with categories and save, save receipt to SQLite" />
+    <MESSAGE value="Week 7: Prepare models for UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week 7: Prepare models for UI" />
   </component>
 </project>
