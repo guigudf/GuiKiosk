@@ -298,7 +298,6 @@ public class MainFrame extends JFrame {
             ta.setEditable(false);
 
             long id = dbSaver.renderAndSave(cart, name);
-            dbSaver.renderAndSave(cart, name);
 
             new ReceiptDialog(this, order, id, file).setVisible(true);
             receiptShown = true;
