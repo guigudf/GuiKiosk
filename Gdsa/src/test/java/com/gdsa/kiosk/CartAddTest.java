@@ -16,7 +16,7 @@ public class CartAddTest {
     void setup() {
         cart = new Cart();
         coffee = new MenuItem("Coffee", new BigDecimal("3.50"), Category.DRINK);
-        muffin = new MenuItem("Muffin", new BigDecimal("2.25"), Category.FOOD);
+        muffin = new MenuItem("Muffin", new BigDecimal("2.25"), Category.BAKERY);
     }
 
     @Test

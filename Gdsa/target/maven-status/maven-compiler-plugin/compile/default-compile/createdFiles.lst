@@ -1,6 +1,7 @@
 com\gdsa\kiosk\GUI\MainGUI.class
 com\gdsa\kiosk\interfaces\CatalogRepository.class
 com\gdsa\kiosk\UI\ReceiptFormatter.class
+com\gdsa\kiosk\UI\MainFrame$2.class
 com\gdsa\kiosk\repo\SqliteReceiptRepository.class
 com\gdsa\kiosk\repo\FileReceiptRepository.class
 com\gdsa\kiosk\model\ReceiptSaver.class

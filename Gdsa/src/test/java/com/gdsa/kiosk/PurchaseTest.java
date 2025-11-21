@@ -24,7 +24,7 @@ public class PurchaseTest {
     void PurchaseFlowTest() {
         // Simulate user adding items via KioskUI
         MenuItem coffee = new MenuItem("Coffee", new BigDecimal("3.50"), Category.DRINK);
-        MenuItem sandwich = new MenuItem("Sandwich", new BigDecimal("6.00"), Category.FOOD);
+        MenuItem sandwich = new MenuItem("Sandwich", new BigDecimal("6.00"), Category.BAKERY);
 
         cart.add(coffee, 2);
         cart.add(sandwich, 1);

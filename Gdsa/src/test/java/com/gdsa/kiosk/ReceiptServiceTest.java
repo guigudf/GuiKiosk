@@ -32,7 +32,7 @@ class ReceiptServiceTest {
     @Test
     void ReceiptTotalsTest() {
         cart.add(new MenuItem("Coffee", new BigDecimal("3.00"), Category.DRINK), 2);
-        cart.add(new MenuItem("Muffin", new BigDecimal("2.00"), Category.FOOD), 1);
+        cart.add(new MenuItem("Muffin", new BigDecimal("2.00"), Category.BAKERY), 1);
 
         List<String> lines = receipt.render(cart);
 

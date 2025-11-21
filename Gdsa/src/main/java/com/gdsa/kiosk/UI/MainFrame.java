@@ -1,13 +1,13 @@
 package com.gdsa.kiosk.UI;
 import com.gdsa.kiosk.interfaces.CatalogRepository;
 import com.gdsa.kiosk.interfaces.TaxCalculator;
-import com.gdsa.kiosk.model.Cart;
-import com.gdsa.kiosk.model.Category;
-import com.gdsa.kiosk.model.FlatRateTaxCalculator;
+import com.gdsa.kiosk.model.*;
 import com.gdsa.kiosk.model.MenuItem;
 import com.gdsa.kiosk.repo.InMemoryCatalogRepository;
-import com.gdsa.kiosk.model.Order;
 import com.gdsa.kiosk.repo.FileReceiptRepository;
+import com.gdsa.kiosk.model.ReceiptDbSaver;
+import com.gdsa.kiosk.repo.SqliteReceiptRepository;
+
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import java.awt.*;
@@ -25,7 +25,9 @@ public class MainFrame extends JFrame {
     private final Cart cart = new Cart();
     private final TaxCalculator taxCalc = new FlatRateTaxCalculator(new BigDecimal("0.06"));
     private final FileReceiptRepository receiptRepository = new FileReceiptRepository(defaultReceiptDir());
-
+    private final ReceiptService receiptService = new ReceiptService(new FlatRateTaxCalculator(new BigDecimal("0.13")));
+    private final SqliteReceiptRepository dbRepo = new SqliteReceiptRepository(Paths.get("receipts.db"));
+    private final ReceiptDbSaver dbSaver = new ReceiptDbSaver(receiptService, dbRepo);
     private JList<MenuItem> itemsList;
     private DefaultListModel<MenuItem> itemsModel;
     private JSpinner qtySpinner;
@@ -47,7 +49,6 @@ public class MainFrame extends JFrame {
         add(buildCenterPanel(), BorderLayout.CENTER);
         add(buildRightPanel(), BorderLayout.EAST);
         add(buildBottomBar(), BorderLayout.SOUTH);
-
         loadItems(Category.DRINK);
         updateTotals();
     }
@@ -60,13 +61,17 @@ public class MainFrame extends JFrame {
         var drinksBtn = new JButton("Drinks");
         drinksBtn.addActionListener(e -> loadItems(Category.DRINK));
         var foodBtn = new JButton("Food");
-        foodBtn.addActionListener(e -> loadItems(Category.FOOD));
+        foodBtn.addActionListener(e -> loadItems(Category.BAKERY));
+        var desertBtn = new JButton("Desert");
+        desertBtn.addActionListener(e -> loadItems(Category.SNACKS));
 
         panel.add(new JLabel("Categories"));
         panel.add(Box.createVerticalStrut(10));
         panel.add(drinksBtn);
         panel.add(Box.createVerticalStrut(5));
         panel.add(foodBtn);
+        panel.add(Box.createVerticalStrut(5));
+        panel.add(desertBtn);
 
         panel.setPreferredSize(new Dimension(180, 10));
         return panel;
@@ -82,14 +87,73 @@ public class MainFrame extends JFrame {
         itemsList = new JList<>(itemsModel);
         itemsList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         itemsList.addListSelectionListener(this::onItemSelected);
-        itemsList.setCellRenderer(new DefaultListCellRenderer() {
+
+        itemsList.setCellRenderer(new ListCellRenderer<MenuItem>() {
+            private final JPanel panel = new JPanel(new BorderLayout());
+            private final JLabel left = new JLabel();
+            private final JLabel right = new JLabel();
+
             @Override
-            public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-                var c = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-                if (value instanceof MenuItem mi) {
-                    setText(mi.getName() + " — " + mi.getPrice().toPlainString());
+            public Component getListCellRendererComponent(
+                    JList<? extends MenuItem> list,
+                    MenuItem value,
+                    int index,
+                    boolean isSelected,
+                    boolean cellHasFocus) {
+
+                left.setText(value.getName());
+                right.setText(value.getPrice().toPlainString());
+
+                // Styling
+                panel.setBorder(BorderFactory.createEmptyBorder(3, 5, 3, 10));
+                panel.add(left, BorderLayout.WEST);
+                panel.add(right, BorderLayout.EAST);
+
+                if (isSelected) {
+                    panel.setBackground(list.getSelectionBackground());
+                    left.setForeground(list.getSelectionForeground());
+                    right.setForeground(list.getSelectionForeground());
+                } else {
+                    panel.setBackground(list.getBackground());
+                    left.setForeground(list.getForeground());
+                    right.setForeground(list.getForeground());
                 }
-                return c;
+
+                return panel;
+            }
+        });
+
+        itemsList.addMouseListener(new java.awt.event.MouseAdapter() {
+
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent e) {
+                if (!SwingUtilities.isLeftMouseButton(e)) return;
+
+                int clickCount = e.getClickCount();
+                if (clickCount < 2) return; // only double-click or more
+                int index = itemsList.locationToIndex(e.getPoint());
+                if (index < 0) return;
+
+                Rectangle cellBounds = itemsList.getCellBounds(index, index);
+                if (cellBounds == null || !cellBounds.contains(e.getPoint())) return;
+
+                MenuItem item = itemsModel.getElementAt(index);
+                if (item == null) return;
+
+                int qtyToAdd = clickCount - (clickCount-1); // double=1, triple=2, quadruple=3, etc.
+
+                try {
+                    cart.add(item, qtyToAdd);
+                    cartTableModel.refresh();
+                    updateTotals();
+                } catch (IllegalArgumentException ex) {
+                    JOptionPane.showMessageDialog(
+                            MainFrame.this,
+                            ex.getMessage(),
+                            "Invalid quantity",
+                            JOptionPane.ERROR_MESSAGE
+                    );
+                }
             }
         });
 
@@ -97,7 +161,7 @@ public class MainFrame extends JFrame {
 
         var foot = new JPanel(new FlowLayout(FlowLayout.LEFT));
         foot.add(new JLabel("Qty:"));
-        qtySpinner = new JSpinner(new SpinnerNumberModel(1, 1, 99, 1));
+        qtySpinner = new JSpinner(new SpinnerNumberModel(1, 1, 10, 1));
         foot.add(qtySpinner);
 
         addBtn = new JButton("Add to Cart");
@@ -227,11 +291,23 @@ public class MainFrame extends JFrame {
         boolean receiptShown = false;
         try {
             var file = receiptRepository.save(receiptLines);
-            new ReceiptDialog(this, order, file).setVisible(true);
+
+            List<String> receipt = receiptService.render(cart);
+            JTextArea ta = new JTextArea(String.join("\n", receipt));
+            ta.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
+            ta.setEditable(false);
+
+            long id = dbSaver.renderAndSave(cart, name);
+            dbSaver.renderAndSave(cart, name);
+
+            new ReceiptDialog(this, order, id, file).setVisible(true);
             receiptShown = true;
+
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(this, "Failed to save receipt: " + ex.getMessage(),
                     "Receipt Error", JOptionPane.ERROR_MESSAGE);
+        } catch (Exception ex) {
+            throw new RuntimeException(ex);
         }
 
         if (receiptShown) {

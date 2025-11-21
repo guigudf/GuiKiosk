@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18b12e23-90b3-4bc1-8a1a-7f434abf986d" name="Changes" comment="Week 8-9: Added UI and cart interaction">
-      <change afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/UI/ReceiptDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/UI/ReceiptFormatter.java" afterDir="false" />
+    <list default="true" id="18b12e23-90b3-4bc1-8a1a-7f434abf986d" name="Changes" comment="Added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/UI/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/UI/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/UI/ReceiptDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/UI/ReceiptDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/repo/InMemoryCatalogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/main/java/com/gdsa/kiosk/repo/InMemoryCatalogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/CartAddTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/CartAddTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/CategoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/CategoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/PurchaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/PurchaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/ReceiptServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/src/test/java/com/gdsa/kiosk/ReceiptServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/Gdsa-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/Gdsa-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/UI/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/UI/MainFrame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/UI/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/UI/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/repo/InMemoryCatalogRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/classes/com/gdsa/kiosk/repo/InMemoryCatalogRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
@@ -26,10 +33,14 @@
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.SqliteReceiptRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/TEST-com.gdsa.kiosk.SqliteReceiptRepositoryTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CartAddTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CartAddTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CartTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CartTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CategoryTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.CategoryTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.OrderTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.OrderTests.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.PurchaseTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.PurchaseTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.ReceiptFileTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.ReceiptFileTests.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.ReceiptServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.ReceiptServiceTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.SqliteReceiptRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/surefire-reports/com.gdsa.kiosk.SqliteReceiptRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gdsa/target/test-classes/com/gdsa/kiosk/CategoryTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/Gdsa/target/test-classes/com/gdsa/kiosk/CategoryTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/receipts.db" beforeDir="false" afterPath="$PROJECT_DIR$/receipts.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +61,6 @@
       <list>
         <option value="GuilhermeDSA" />
       </list>
-    </option>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -85,42 +91,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.gdsa.com.kiosk.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.CartAddTest.executor": "Run",
-    "JUnit.CartTest.executor": "Run",
-    "JUnit.FlowTest.executor": "Run",
-    "JUnit.OrderTests.executor": "Run",
-    "JUnit.PurchaseFlowTestPurchaseFlowTest.executor": "Run",
-    "JUnit.ReceiptServiceTest.executor": "Run",
-    "JUnit.java.gdsa.com.kiosk in GuiKiosk.executor": "Run",
-    "Maven.Final_Project [install,--non-recursive].executor": "Run",
-    "Maven.Final_Project [install].executor": "Run",
-    "Maven.Gdsa [install,--non-recursive].executor": "Run",
-    "Maven.Gdsa [install].executor": "Run",
-    "Maven.Main.executor": "Run",
-    "Maven.MainCLI.executor": "Run",
-    "Maven.MainGUI.executor": "Run",
-    "Maven.com.gdsa.kiosk.cli.Main.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Week10",
-    "last_directory_selection": "C:/Users/guigu/Documents/OOP2/GuiKiosk/Gdsa/src/main/java/gdsa/com/kiosk",
-    "last_opened_file_path": "C:/Users/guigu/Documents/OOP2/GuiKiosk",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.externalResources"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.gdsa.com.kiosk.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.CartAddTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CartTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FlowTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReceiptServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java.gdsa.com.kiosk in GuiKiosk.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Final_Project [install,--non-recursive].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Final_Project [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Gdsa [install,--non-recursive].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Gdsa [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MainCLI.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MainGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.com.gdsa.kiosk.cli.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/guigu/Documents/OOP2/GuiKiosk/Gdsa/src/main/java/gdsa/com/kiosk&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/guigu/Documents/OOP2/GuiKiosk&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalResources&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\guigu\Documents\OOP2\Final_Project\src\main" />
@@ -130,7 +135,7 @@
       <recent name="C:\Users\guigu\Documents\OOP2\Final_Project\src\main" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.gdsa.kiosk.Main" />
       <module name="Final_Project" />
@@ -253,24 +258,19 @@
       <option name="project" value="LOCAL" />
       <updated>1763093100208</updated>
     </task>
-    <task id="LOCAL-00009" summary="Week 8-9: Added UI and cart interaction">
-      <option name="closed" value="true" />
-      <created>1763094676054</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1763094676054</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Week 8-9: Added UI and cart interaction">
-      <option name="closed" value="true" />
-      <created>1763094711512</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1763094711512</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit, setup project" />
@@ -280,7 +280,6 @@
     <MESSAGE value="Week 4: add Category to MenuItem and repository filtering" />
     <MESSAGE value="Week 5 and 6: save receipt to a file, extend CLI with categories and save, save receipt to SQLite" />
     <MESSAGE value="Week 7: Prepare models for UI" />
-    <MESSAGE value="Week 8-9: Added UI and cart interaction" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week 8-9: Added UI and cart interaction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week 7: Prepare models for UI" />
   </component>
 </project>

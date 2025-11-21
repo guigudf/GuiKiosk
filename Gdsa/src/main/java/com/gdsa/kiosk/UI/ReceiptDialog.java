@@ -7,7 +7,7 @@ import java.awt.*;
 import java.nio.file.Path;
 
 public class ReceiptDialog extends JDialog {
-    public ReceiptDialog(Window owner, Order order, Path savedFile) {
+    public ReceiptDialog(Window owner, Order order, long id,  Path savedFile) {
         super(owner, "Receipt", ModalityType.APPLICATION_MODAL);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setSize(520, 420);
@@ -23,7 +23,10 @@ public class ReceiptDialog extends JDialog {
 
         var south = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         if (savedFile != null) {
-            south.add(new JLabel("Saved to: " + savedFile.toAbsolutePath()));
+            south.add(new JLabel(
+                    "<html>Saved to: " + savedFile.toAbsolutePath() +
+                            "<br>Saved receipt with ID: " + id + "</html>"
+            ));
         }
         south.add(closeBtn);
 

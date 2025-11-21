@@ -1,8 +1,8 @@
 package com.gdsa.kiosk.model;
 
 public enum Category {
-    FOOD,
+    BAKERY,
     DRINK,
-    DESERT
+    SNACKS
 }
 
