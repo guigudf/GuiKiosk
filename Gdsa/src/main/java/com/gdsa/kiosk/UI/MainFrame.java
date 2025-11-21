@@ -6,18 +6,25 @@ import com.gdsa.kiosk.model.Category;
 import com.gdsa.kiosk.model.FlatRateTaxCalculator;
 import com.gdsa.kiosk.model.MenuItem;
 import com.gdsa.kiosk.repo.InMemoryCatalogRepository;
-
+import com.gdsa.kiosk.model.Order;
+import com.gdsa.kiosk.repo.FileReceiptRepository;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import java.awt.*;
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.io.IOException;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class MainFrame extends JFrame {
     private final CatalogRepository catalogRepo = new InMemoryCatalogRepository();
     private final Cart cart = new Cart();
     private final TaxCalculator taxCalc = new FlatRateTaxCalculator(new BigDecimal("0.06"));
+    private final FileReceiptRepository receiptRepository = new FileReceiptRepository(defaultReceiptDir());
 
     private JList<MenuItem> itemsList;
     private DefaultListModel<MenuItem> itemsModel;
@@ -74,7 +81,7 @@ public class MainFrame extends JFrame {
         itemsModel = new DefaultListModel<>();
         itemsList = new JList<>(itemsModel);
         itemsList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        itemsList.addListSelectionListener(e -> onItemSelected(e));
+        itemsList.addListSelectionListener(this::onItemSelected);
         itemsList.setCellRenderer(new DefaultListCellRenderer() {
             @Override
             public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
@@ -135,7 +142,7 @@ public class MainFrame extends JFrame {
         totalLbl = new JLabel("Total: 0.00");
 
         var checkoutBtn = new JButton("Checkout…");
-        // wire in Week 10
+        checkoutBtn.addActionListener(e -> handleCheckout());
 
         panel.add(subtotalLbl);
         panel.add(new JLabel("   "));
@@ -182,7 +189,7 @@ public class MainFrame extends JFrame {
 
     private void loadItems(Category category) {
         List<MenuItem> all = catalogRepo.all();
-        var list = all.stream().filter(m -> m.getCategory() == category).collect(Collectors.toList());
+        var list = all.stream().filter(m -> m.getCategory() == category).toList();
 
         itemsModel.clear();
         for (var m : list) itemsModel.addElement(m);
@@ -198,5 +205,61 @@ public class MainFrame extends JFrame {
         subtotalLbl.setText("Subtotal: " + sub.toPlainString());
         taxLbl.setText("Tax: " + tax.toPlainString());
         totalLbl.setText("Total: " + tot.toPlainString());
+    }
+
+    private void handleCheckout() {
+        if (cart.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Cart is empty.", "Cannot checkout", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        String name = JOptionPane.showInputDialog(this, "Enter customer name:", "Checkout", JOptionPane.PLAIN_MESSAGE);
+        if (name == null) return;
+        name = name.trim();
+        if (name.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Name is required.", "Invalid input", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        Order order = buildOrderSnapshot(name);
+        String receiptText = ReceiptFormatter.format(order);
+        var receiptLines = receiptText.lines().toList();
+        boolean receiptShown = false;
+        try {
+            var file = receiptRepository.save(receiptLines);
+            new ReceiptDialog(this, order, file).setVisible(true);
+            receiptShown = true;
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this, "Failed to save receipt: " + ex.getMessage(),
+                    "Receipt Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+        if (receiptShown) {
+            cart.clear();
+            cartTableModel.refresh();
+            updateTotals();
+        }
+    }
+
+    private Order buildOrderSnapshot(String customerName) {
+        var subtotal = cart.getSubtotal();
+        var tax = cart.getTax(taxCalc);
+        var total = cart.getTotal(taxCalc);
+
+        String orderId = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss")
+                .withZone(ZoneId.systemDefault())
+                .format(Instant.now());
+
+        return new Order(
+                orderId,
+                customerName,
+                Instant.now(),
+                cart.items(),
+                subtotal, tax, total
+        );
+    }
+
+    private static Path defaultReceiptDir() {
+        return Paths.get(System.getProperty("user.home"), "kiosk-receipts");
     }
 }
