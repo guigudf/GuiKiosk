@@ -24,7 +24,7 @@ public class MainFrame extends JFrame {
     private final CatalogRepository catalogRepo = new InMemoryCatalogRepository();
     private final Cart cart = new Cart();
     private final TaxCalculator taxCalc = new FlatRateTaxCalculator(new BigDecimal("0.06"));
-    private final FileReceiptRepository receiptRepository = new FileReceiptRepository(defaultReceiptDir());
+    //private final FileReceiptRepository receiptRepository = new FileReceiptRepository(defaultReceiptDir());
     private final ReceiptService receiptService = new ReceiptService(new FlatRateTaxCalculator(new BigDecimal("0.13")));
     private final SqliteReceiptRepository dbRepo = new SqliteReceiptRepository(Paths.get("receipts.db"));
     private final ReceiptDbSaver dbSaver = new ReceiptDbSaver(receiptService, dbRepo);
@@ -60,18 +60,18 @@ public class MainFrame extends JFrame {
 
         var drinksBtn = new JButton("Drinks");
         drinksBtn.addActionListener(e -> loadItems(Category.DRINK));
-        var foodBtn = new JButton("Food");
-        foodBtn.addActionListener(e -> loadItems(Category.BAKERY));
-        var desertBtn = new JButton("Desert");
-        desertBtn.addActionListener(e -> loadItems(Category.SNACKS));
+        var bakeryBtn = new JButton("Bakery");
+        bakeryBtn.addActionListener(e -> loadItems(Category.BAKERY));
+        var snackBtn = new JButton("Snack");
+        snackBtn.addActionListener(e -> loadItems(Category.SNACKS));
 
         panel.add(new JLabel("Categories"));
         panel.add(Box.createVerticalStrut(10));
         panel.add(drinksBtn);
         panel.add(Box.createVerticalStrut(5));
-        panel.add(foodBtn);
+        panel.add(bakeryBtn);
         panel.add(Box.createVerticalStrut(5));
-        panel.add(desertBtn);
+        panel.add(snackBtn);
 
         panel.setPreferredSize(new Dimension(180, 10));
         return panel;
@@ -286,11 +286,15 @@ public class MainFrame extends JFrame {
         }
 
         Order order = buildOrderSnapshot(name);
-        String receiptText = ReceiptFormatter.format(order);
-        var receiptLines = receiptText.lines().toList();
+
+        //String receiptText = ReceiptFormatter.format(order);
+        //var receiptLines = receiptText.lines().toList();
+
         boolean receiptShown = false;
+
         try {
-            var file = receiptRepository.save(receiptLines);
+
+            //var file = receiptRepository.save(receiptLines);
 
             List<String> receipt = receiptService.render(cart);
             JTextArea ta = new JTextArea(String.join("\n", receipt));
@@ -298,8 +302,10 @@ public class MainFrame extends JFrame {
             ta.setEditable(false);
 
             long id = dbSaver.renderAndSave(cart, name);
+            new ReceiptDialog(this, order, id).setVisible(true);
 
-            new ReceiptDialog(this, order, id, file).setVisible(true);
+
+
             receiptShown = true;
 
         } catch (IOException ex) {

@@ -4,10 +4,11 @@ import com.gdsa.kiosk.model.Order;
 
 import javax.swing.*;
 import java.awt.*;
-import java.nio.file.Path;
 
 public class ReceiptDialog extends JDialog {
-    public ReceiptDialog(Window owner, Order order, long id,  Path savedFile) {
+    public ReceiptDialog(Window owner, Order order, long id) {
+        //final boolean saveToFile = false;
+        final boolean saveToDatabase = true;
         super(owner, "Receipt", ModalityType.APPLICATION_MODAL);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setSize(520, 420);
@@ -22,10 +23,14 @@ public class ReceiptDialog extends JDialog {
         closeBtn.addActionListener(e -> dispose());
 
         var south = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        if (savedFile != null) {
+//        if (savedFile != null && saveToFile == true) {
+//            south.add(new JLabel(
+//                    "<html>Saved to: " + savedFile.toAbsolutePath() +"</html>"
+//            ));
+//        }
+        if (saveToDatabase) {
             south.add(new JLabel(
-                    "<html>Saved to: " + savedFile.toAbsolutePath() +
-                            "<br>Saved receipt with ID: " + id + "</html>"
+                    "<html>Saved receipt with ID: " + id + "</html>"
             ));
         }
         south.add(closeBtn);
